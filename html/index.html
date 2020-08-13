@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Farmz2U Dialogue Box</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/index.css">
+  
+  <script>
+      function showDialog(){
+       
+        var dialog = document.getElementById("dialog");
+        dialog.style.display = "inline-block";
+      }
+
+      function hidDialog(){
+
+        var dialog = document.getElementById("dialog");
+        dialog.style.display = "none";
+      }
+
+      function showDialogSuccess(){
+       
+        var dialog = document.getElementById("dialog-success");
+        dialog.style.display = "inline-block";
+      }
+
+      function hidDialogSuccess(){
+
+        var dialog = document.getElementById("dialog-success");
+        dialog.style.display = "none";
+      }
+  </script>
+</head>
+<body>
+ 
+      <center>
+        <button onclick=showDialog()>click me!</button>
+
+        <button onclick=showDialogSuccess()>click me 2!</button>
+        <div class="card dialog-box" id="dialog" style="display: none">
+             <div class="card-body">
+
+               
+                    <h3 class='dialog-box-title'>Looks like you don't have enough capital</h3>
+
+                    <button class='dialog-box-button' onclick=hidDialog()>Apply for capital</button>
+                  
+              </div>      
+        </div>
+
+         <div class="card dialog-box" id="dialog-success" style="display: none">
+             <div class="card-body">
+
+                   
+                    <h3 class='dialog-box-title'>You are all set</h3>
+
+                    <button class='dialog-box-button' onclick=hidDialogSuccess()>Get started</button>
+                  
+              </div>      
+        </div>
+
+      </center>  
+ 
+ 
+</body>
+</html>
